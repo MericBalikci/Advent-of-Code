@@ -3,3 +3,7 @@
 
 # Visual Studio cache directory
 .vs/
+
+# Unnecessary directories
+.bin/
+.obj/
