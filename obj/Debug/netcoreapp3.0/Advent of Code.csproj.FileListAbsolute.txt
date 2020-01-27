@@ -1,0 +1,22 @@
+/home/meric/Projects/Rider Projects/Advent of Code/Advent of Code/bin/Debug/netcoreapp3.0/Advent of Code
+/home/meric/Projects/Rider Projects/Advent of Code/Advent of Code/bin/Debug/netcoreapp3.0/Advent of Code.deps.json
+/home/meric/Projects/Rider Projects/Advent of Code/Advent of Code/bin/Debug/netcoreapp3.0/Advent of Code.runtimeconfig.json
+/home/meric/Projects/Rider Projects/Advent of Code/Advent of Code/bin/Debug/netcoreapp3.0/Advent of Code.runtimeconfig.dev.json
+/home/meric/Projects/Rider Projects/Advent of Code/Advent of Code/bin/Debug/netcoreapp3.0/Advent of Code.dll
+/home/meric/Projects/Rider Projects/Advent of Code/Advent of Code/bin/Debug/netcoreapp3.0/Advent of Code.pdb
+/home/meric/Projects/Rider Projects/Advent of Code/Advent of Code/obj/Debug/netcoreapp3.0/Advent of Code.csprojAssemblyReference.cache
+/home/meric/Projects/Rider Projects/Advent of Code/Advent of Code/obj/Debug/netcoreapp3.0/Advent of Code.AssemblyInfoInputs.cache
+/home/meric/Projects/Rider Projects/Advent of Code/Advent of Code/obj/Debug/netcoreapp3.0/Advent of Code.AssemblyInfo.cs
+/home/meric/Projects/Rider Projects/Advent of Code/Advent of Code/obj/Debug/netcoreapp3.0/Advent of Code.dll
+/home/meric/Projects/Rider Projects/Advent of Code/Advent of Code/obj/Debug/netcoreapp3.0/Advent of Code.pdb
+/home/meric/Projects/Rider Projects/Advent of Code/bin/Debug/netcoreapp3.0/Advent of Code
+/home/meric/Projects/Rider Projects/Advent of Code/bin/Debug/netcoreapp3.0/Advent of Code.deps.json
+/home/meric/Projects/Rider Projects/Advent of Code/bin/Debug/netcoreapp3.0/Advent of Code.runtimeconfig.json
+/home/meric/Projects/Rider Projects/Advent of Code/bin/Debug/netcoreapp3.0/Advent of Code.runtimeconfig.dev.json
+/home/meric/Projects/Rider Projects/Advent of Code/bin/Debug/netcoreapp3.0/Advent of Code.dll
+/home/meric/Projects/Rider Projects/Advent of Code/bin/Debug/netcoreapp3.0/Advent of Code.pdb
+/home/meric/Projects/Rider Projects/Advent of Code/obj/Debug/netcoreapp3.0/Advent of Code.csprojAssemblyReference.cache
+/home/meric/Projects/Rider Projects/Advent of Code/obj/Debug/netcoreapp3.0/Advent of Code.AssemblyInfoInputs.cache
+/home/meric/Projects/Rider Projects/Advent of Code/obj/Debug/netcoreapp3.0/Advent of Code.AssemblyInfo.cs
+/home/meric/Projects/Rider Projects/Advent of Code/obj/Debug/netcoreapp3.0/Advent of Code.dll
+/home/meric/Projects/Rider Projects/Advent of Code/obj/Debug/netcoreapp3.0/Advent of Code.pdb

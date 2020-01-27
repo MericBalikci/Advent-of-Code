@@ -1,0 +1,5 @@
+# Rider cache directory
+.idea/
+
+# Visual Studio cache directory
+.vs/
