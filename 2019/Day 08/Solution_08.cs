@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AdventOfCode_2019
 {
-    public class Solution
+    public class Solution_08
     {
         private static void ProcessInput()
         {

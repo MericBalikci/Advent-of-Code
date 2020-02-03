@@ -3,9 +3,12 @@ using System.Collections.Generic;
 
 namespace AdventOfCode_2019.Day_9
 {
-    public class Solution
+    public class Solution_09
     {
-        public static void Prepare()
+        /// <summary>
+        /// 
+        /// </summary>
+        public static void LaunchBOOST()
         {
             List<long> BOOST = new List<long>()
             {
@@ -19,16 +22,22 @@ namespace AdventOfCode_2019.Day_9
             }
         }
         
+        /// <summary>
+        /// 
+        /// </summary>
         public void SolvePartOne()
         {
-            Prepare();
+            LaunchBOOST();
             IntCode_V2.SystemId.Enqueue(1);
             Console.WriteLine(IntCode_V2.Run());
         }
         
+        /// <summary>
+        /// 
+        /// </summary>
         public void SolvePartTwo()
         {
-            Prepare();
+            LaunchBOOST();
             IntCode_V2.SystemId.Enqueue(2);
             Console.WriteLine(IntCode_V2.Run());
         }
