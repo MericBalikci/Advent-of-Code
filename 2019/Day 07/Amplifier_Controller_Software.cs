@@ -7,8 +7,14 @@ namespace AdventOfCode_2019
 {
     public class Amplifier_Controller_Software
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public static Amplifier_Controller_Software currentSoftware;
         
+        /// <summary>
+        /// 
+        /// </summary>
         private static List<long> possibleOutputs= new List<long>(); 
         
         /// <summary>
@@ -55,9 +61,9 @@ namespace AdventOfCode_2019
             this.Program = program;
         }
 
-        private static void RunFeedbackLoop()
+        private static void RunFeedbackLoop(string phaseSettings)
         {
-            String_Utils.GetPermutationOfString("56789", 0, 4);
+            String_Utils.GetPermutationOfString(phaseSettings, 0, 4);
             foreach (string str in String_Utils.PermutationOfString)
             {
                 int phaseA = Int32.Parse(str[0].ToString());
@@ -65,14 +71,15 @@ namespace AdventOfCode_2019
                 int phaseC = Int32.Parse(str[2].ToString());
                 int phaseD = Int32.Parse(str[3].ToString());
                 int phaseE = Int32.Parse(str[4].ToString());
+                
                 Amplifier_Controller_Software A = new Amplifier_Controller_Software(phaseA,ACS);
                 Amplifier_Controller_Software B = new Amplifier_Controller_Software(phaseB,ACS);
                 Amplifier_Controller_Software C = new Amplifier_Controller_Software(phaseC,ACS);
                 Amplifier_Controller_Software D = new Amplifier_Controller_Software(phaseD,ACS);
                 Amplifier_Controller_Software E = new Amplifier_Controller_Software(phaseE,ACS);
+                
                 A.SystemId.Enqueue(A.PhaseSetting);
                 A.SystemId.Enqueue(0);
-                
                 B.SystemId.Enqueue(B.PhaseSetting);
                 C.SystemId.Enqueue(C.PhaseSetting);
                 D.SystemId.Enqueue(D.PhaseSetting);
@@ -82,31 +89,31 @@ namespace AdventOfCode_2019
                 {
                     Amplifier_Controller_Software.currentSoftware = A;
                     IntCode_V2.LoadMemory();
-                    A.Output = IntCode_V2.Run();
+                    A.Output = IntCode_V2.Run(A.Program);
 
                     B.SystemId.Enqueue(A.Output);
                     IntCode_V2.ClearMemory();
                     Amplifier_Controller_Software.currentSoftware = B;
                     IntCode_V2.LoadMemory();
-                    B.Output = IntCode_V2.Run();
+                    B.Output = IntCode_V2.Run(B.Program);
                     
                     C.SystemId.Enqueue(B.Output);
                     IntCode_V2.ClearMemory();
                     Amplifier_Controller_Software.currentSoftware = C;
                     IntCode_V2.LoadMemory();
-                    C.Output = IntCode_V2.Run();
+                    C.Output = IntCode_V2.Run(C.Program);
                     
                     D.SystemId.Enqueue(C.Output);
                     IntCode_V2.ClearMemory();
                     Amplifier_Controller_Software.currentSoftware = D;
                     IntCode_V2.LoadMemory();
-                    D.Output = IntCode_V2.Run();
+                    D.Output = IntCode_V2.Run(D.Program);
                     
                     E.SystemId.Enqueue(D.Output);
                     IntCode_V2.ClearMemory();
                     Amplifier_Controller_Software.currentSoftware = E;
                     IntCode_V2.LoadMemory();
-                    E.Output = IntCode_V2.Run();
+                    E.Output = IntCode_V2.Run(E.Program);
 
                     if (!E.IndexPointer.Equals(-1))
                     {
