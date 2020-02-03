@@ -5,5 +5,5 @@
 .vs/
 
 # Unnecessary directories
-.bin/
-.obj/
+bin/
+obj/
