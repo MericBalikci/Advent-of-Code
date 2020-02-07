@@ -1,54 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
 
+/// <summary>
+/// 
+/// </summary>
 public static class Fuel_Management_System
 {
     /// <summary>
     /// 
     /// </summary>
-    private static List<int> positions;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static List<int> Positions
+    /// <param name="position"></param>
+    /// <returns></returns>
+    public static int CalculateFuelNeeded(int position)
     {
-        get { return positions; }
+        return (int) Math.Floor(position / 3f) - 2;
     }
 
     /// <summary>
     /// 
     /// </summary>
-    /// <param name="positionData"></param>
+    /// <param name="positions"></param>
     /// <returns></returns>
-    public static int CalculateFuelNeeded(int positionData)
+    public static int CalculateTotalFuelNeeded(List<int> positions)
     {
-        return (int) Math.Floor(positionData / 3f) - 2;
-    }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="positionDatas"></param>
-    /// <returns></returns>
-    public static int TotalFuelNeeded(List<int> positionDatas)
-    {
-        int totalFuel = 0;
-        foreach (int positionData in positionDatas)
+        int fuelNeeded = 0;
+        foreach (int position in positions)
         {
-            int result = 0;
-            result = CalculateFuelNeeded(positionData);
-            totalFuel += result;
+            int result = CalculateFuelNeeded(position);
+            fuelNeeded += result;
             while (result > 0)
             {
                 result = CalculateFuelNeeded(result);
                 if (result > 0)
                 {
-                    totalFuel += result;
-                    Console.WriteLine(result);
+                    fuelNeeded += result;
                 }
             }
         }
-        return totalFuel;
+        return fuelNeeded;
     }
 }

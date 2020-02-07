@@ -1,24 +1,33 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
+using System.Collections.Generic;
 
-public class Solution_01
+public static class Solution_01
 {
-    public void TakeInput()
+    private static List<int> input;
+
+    private static void TakeInput()
     {
-        throw new NotImplementedException();
+        List<string> rawInput = File.ReadLines(Program.DefaultInputPath + "/Day 01.txt").ToList();
+        foreach (string str in rawInput)
+        {
+            input.Add(int.Parse(str));
+        }
     }
 
-    public void SolvePartOne()
+    public static void SolvePartOne()
     {
-        int result = 0;
-        foreach (int position in Fuel_Management_System.Positions)
-        {
-            result += Fuel_Management_System.CalculateFuelNeeded(position);
-        }
+        input = new List<int>();
+        TakeInput();
+        int result = input.Sum(position => Fuel_Management_System.CalculateFuelNeeded(position));
         Console.WriteLine(result.ToString());
     }
 
-    public void SolvePartTwo()
+    public static void SolvePartTwo()
     {
-        Console.WriteLine(Fuel_Management_System.TotalFuelNeeded(Fuel_Management_System.Positions));
+        input = new List<int>();
+        TakeInput();
+        Console.WriteLine(Fuel_Management_System.CalculateTotalFuelNeeded(input));
     }
 }
