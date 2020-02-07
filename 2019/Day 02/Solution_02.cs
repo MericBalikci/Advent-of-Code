@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Collections.Generic;
 
 public static class Solution_02
 {
@@ -12,7 +12,7 @@ public static class Solution_02
        List<string> rawInput = File.ReadAllText(Program.DefaultInputPath+"/Day 02.txt").Split(",").ToList();
        foreach (string str in rawInput)
        {
-           input.Add(Int32.Parse(str));
+           input.Add(int.Parse(str));
        }
     }
 
